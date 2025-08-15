@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Em Dash Optimizer</title>
+    <link rel="icon" type="image/png" sizes="36x36" href="icons/favicon36.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon32.png" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <img src="icons/logo.svg" alt="Logo" class="logo" />
+                <h1 class="title">Em Dash Optimizer</h1>
+            </div>
+        </header>
+
+        <div class="toolbar">
+            <label class="switch">
+                <input type="checkbox" id="togglePreview" />
+                <span class="slider"></span>
+                <span class="switch-label">Preview</span>
+            </label>
+        </div>
+
+        <div id="previewPanel" class="preview hidden">
+            <textarea id="preview" readonly placeholder="Preview of your clipboard will appear here"></textarea>
+        </div>
+
+        <div class="actions">
+            <button id="btnOptimize" class="btn btn-accent">Optimize</button>
+        </div>
+
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="popup.js"></script>
+    </body>
+    </html>
