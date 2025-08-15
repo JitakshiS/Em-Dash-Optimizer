@@ -12,189 +12,76 @@
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
-            <div class="hero-bg-animation"></div>
             <div class="hero-content">
                 <div class="brand">
                     <img src="icons/logo.svg" alt="Em Dash Optimizer Logo" class="logo">
-                    <h1 class="title">
-                        <span class="title-text">Em Dash</span>
-                        <span class="title-arrow">→</span>
-                        <span class="title-text">Optimizer</span>
-                    </h1>
+                    <h1 class="title">Em Dash Optimizer</h1>
                 </div>
                 <p class="subtitle">Optimize em dashes intelligently: comma, semicolon, or en dash with correct spacing</p>
                 <p class="description">Clean up text from LLMs and other sources instantly. One-click solution for better typography.</p>
                 
-                <!-- Live Preview Widget -->
-                <div class="hero-demo">
-                    <div class="demo-input">
-                        <label for="hero-text">Try it now:</label>
-                        <textarea id="hero-text" placeholder="Paste text with em dashes—like this example—and see the magic happen"></textarea>
-                    </div>
-                    <div class="demo-output">
-                        <label>Optimized:</label>
-                        <div id="hero-output">Paste text with em dashes, like this example, and see the magic happen</div>
-                    </div>
-                </div>
-
                 <div class="cta-buttons">
-                    <a href="#install" class="btn btn-accent">
-                        <span>Install Extension</span>
-                        <span class="btn-icon">⚡</span>
-                    </a>
-                    <a href="#playground" class="btn btn-outline">Try Playground</a>
-                    <a href="https://github.com/JitakshiS/Em-Dash-Optimizer" class="btn btn-outline btn-github" target="_blank">
-                        <span>⭐ GitHub</span>
-                    </a>
+                    <a href="#install" class="btn btn-accent">Install Extension</a>
+                    <a href="#demo" class="btn btn-outline">See Demo</a>
                 </div>
             </div>
         </header>
 
         <!-- Features Section -->
         <section id="features" class="features">
-            <h2 class="section-title">Powerful Features</h2>
+            <h2 class="section-title">Features</h2>
             <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="feature">
                     <div class="feature-icon">📋</div>
                     <h3>One-click clipboard loading</h3>
                     <p>Automatically loads your clipboard content for instant processing</p>
-                    <div class="feature-highlight"></div>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature">
                     <div class="feature-icon">❌</div>
                     <h3>Remove em dashes</h3>
                     <p>Completely removes all em dashes from your text</p>
-                    <div class="feature-highlight"></div>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature">
                     <div class="feature-icon">🔄</div>
                     <h3>Smart replacement</h3>
                     <p>Replace em dashes with any character you want</p>
-                    <div class="feature-highlight"></div>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature">
                     <div class="feature-icon">👀</div>
                     <h3>Live preview</h3>
                     <p>See your text with highlighted em dashes before processing</p>
-                    <div class="feature-highlight"></div>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature">
                     <div class="feature-icon">⌨️</div>
                     <h3>Keyboard shortcuts</h3>
                     <p>Quick shortcuts for faster workflow</p>
-                    <div class="feature-highlight"></div>
                 </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature">
                     <div class="feature-icon">🎨</div>
                     <h3>Modern UI</h3>
                     <p>Clean, intuitive interface that matches your workflow</p>
-                    <div class="feature-highlight"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Playground Section -->
-        <section id="playground" class="playground">
-            <h2 class="section-title">Interactive Playground</h2>
-            <p class="section-subtitle">Try different examples and see how em dash optimization works in real-time</p>
-            
-            <div class="playground-container">
-                <div class="playground-editor">
-                    <div class="editor-header">
-                        <h3>Input Text</h3>
-                        <div class="example-buttons">
-                            <button class="example-btn" data-example="academic">Academic</button>
-                            <button class="example-btn" data-example="business">Business</button>
-                            <button class="example-btn" data-example="resume">Resume</button>
-                            <button class="example-btn" data-example="creative">Creative</button>
-                            <button class="example-btn" data-example="blog">Blog</button>
-                        </div>
+        <!-- Demo Section -->
+        <section id="demo" class="demo">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="demo-container">
+                <div class="demo-before">
+                    <h4>Before</h4>
+                    <div class="demo-text">
+                        The solution—which took hours to find—was simple<br>
+                        Privacy, security, and performance—these are our priorities
                     </div>
-                    <textarea id="playground-input" placeholder="Paste your text with em dashes here or try one of the examples above..."></textarea>
                 </div>
-                
-                <div class="playground-arrow">
-                    <div class="transform-icon">⚡</div>
-                    <div class="transform-text">Transform</div>
-                </div>
-                
-                <div class="playground-output">
-                    <div class="output-header">
-                        <h3>Optimized Output</h3>
-                        <button id="copy-output" class="copy-btn">📋 Copy</button>
+                <div class="demo-arrow">→</div>
+                <div class="demo-after">
+                    <h4>After</h4>
+                    <div class="demo-text">
+                        The solution, which took hours to find, was simple<br>
+                        Privacy, security, and performance: these are our priorities
                     </div>
-                    <div id="playground-result" class="output-text">Your optimized text will appear here...</div>
-                </div>
-            </div>
-
-            <!-- Example Texts (Hidden) -->
-            <div class="example-texts" style="display: none;">
-                <div data-example="academic">Research shows that artificial intelligence—specifically machine learning algorithms—can significantly improve data processing. The study examined three key areas: accuracy, efficiency, and scalability—all crucial for modern applications.</div>
-                <div data-example="business">Our quarterly results—which exceeded expectations by 15%—demonstrate strong market performance. The new strategy focuses on three pillars: customer satisfaction, operational excellence, and innovation—driving sustainable growth.</div>
-                <div data-example="resume">• Led cross-functional team of 12 developers—delivering projects 20% ahead of schedule—while maintaining 99.9% uptime
-• Implemented agile methodologies—resulting in 40% faster deployment cycles—and improved team collaboration</div>
-                <div data-example="creative">The old lighthouse stood on the cliff—weathered by countless storms—yet still guiding ships safely to shore. Sarah remembered her grandmother's words: "Sometimes the most broken things—like old lighthouses and wounded hearts—shine the brightest."</div>
-                <div data-example="blog">Writing great content requires three essential elements: clear structure, engaging voice, and valuable insights—all working together seamlessly. The best writers understand that editing—often the most overlooked part—is where good writing becomes great.</div>
-            </div>
-        </section>
-
-        <!-- Who Uses This Section -->
-        <section class="who-uses">
-            <h2 class="section-title">Who Uses Em Dash Optimizer?</h2>
-            <p class="section-subtitle">Perfect for anyone who works with text and wants professional, polished results</p>
-            
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <div class="audience-icon">✍️</div>
-                    <h3>Content Writers & Bloggers</h3>
-                    <p>Clean up AI-generated content and ensure consistent formatting across all your articles and blog posts.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🎓</div>
-                    <h3>Academic Researchers</h3>
-                    <p>Perfect formatting for research papers, citations, and academic writing with proper punctuation standards.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">📄</div>
-                    <h3>Resume & Cover Letter Writers</h3>
-                    <p>Ensure your resume bullet points and cover letters have professional, consistent formatting that impresses employers.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">💼</div>
-                    <h3>Business Professionals</h3>
-                    <p>Polish emails, reports, and presentations to maintain professional communication standards.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">📚</div>
-                    <h3>Authors & Editors</h3>
-                    <p>Streamline the editing process and ensure consistent formatting across manuscripts and publications.</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🎯</div>
-                    <h3>Students</h3>
-                    <p>Improve essay formatting and ensure academic writing meets proper punctuation and style guidelines.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-label">Texts Optimized</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Happy Users</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Accuracy Rate</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">⚡</div>
-                    <div class="stat-label">Instant Results</div>
                 </div>
             </div>
         </section>
@@ -258,43 +145,6 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="faq">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">What exactly are em dashes and why optimize them?</button>
-                    <div class="faq-answer">
-                        <p>Em dashes (—) are long dashes often used to set off parenthetical information or indicate abrupt changes in thought. While grammatically correct, they can make text harder to read and look unprofessional in business contexts. Our extension intelligently replaces them with commas, semicolons, or periods for better readability.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is this extension safe to use?</button>
-                    <div class="faq-answer">
-                        <p>Absolutely! The extension is completely open-source, doesn't collect any data, and all text processing happens locally in your browser. We never see or store your content.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Does it work with other browsers besides Chrome?</button>
-                    <div class="faq-answer">
-                        <p>Currently, it's designed for Chrome and Chromium-based browsers (Edge, Brave, etc.). Firefox support is planned for future releases.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Can I customize how em dashes are replaced?</button>
-                    <div class="faq-answer">
-                        <p>Yes! The extension allows you to choose how em dashes are replaced - with commas, semicolons, periods, or even custom characters of your choice.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">Is there a keyboard shortcut to optimize text quickly?</button>
-                    <div class="faq-answer">
-                        <p>Yes! Use Ctrl+L (Cmd+L on Mac) to load clipboard content, Ctrl+R to remove em dashes, and Ctrl+E to replace them with your preferred characters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -307,131 +157,5 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        // Em Dash Optimizer functionality
-        function optimizeEmDashes(text) {
-            // Replace em dashes with appropriate punctuation
-            return text
-                .replace(/—([^—]+)—/g, ', $1,')  // Parenthetical em dashes → commas
-                .replace(/—/g, ': ')              // Other em dashes → colons
-                .replace(/\s+/g, ' ')             // Clean up extra spaces
-                .replace(/,\s*,/g, ',')           // Fix double commas
-                .trim();
-        }
-
-        // Hero demo functionality
-        const heroTextarea = document.getElementById('hero-text');
-        const heroOutput = document.getElementById('hero-output');
-        
-        if (heroTextarea && heroOutput) {
-            heroTextarea.addEventListener('input', function() {
-                const text = this.value;
-                if (text.trim()) {
-                    heroOutput.textContent = optimizeEmDashes(text);
-                } else {
-                    heroOutput.textContent = 'Paste text with em dashes, like this example, and see the magic happen';
-                }
-            });
-        }
-
-        // Playground functionality
-        const playgroundInput = document.getElementById('playground-input');
-        const playgroundResult = document.getElementById('playground-result');
-        const copyButton = document.getElementById('copy-output');
-        const exampleButtons = document.querySelectorAll('.example-btn');
-
-        if (playgroundInput && playgroundResult) {
-            playgroundInput.addEventListener('input', function() {
-                const text = this.value;
-                if (text.trim()) {
-                    playgroundResult.textContent = optimizeEmDashes(text);
-                } else {
-                    playgroundResult.textContent = 'Your optimized text will appear here...';
-                }
-            });
-        }
-
-        // Example button functionality
-        exampleButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const exampleType = this.dataset.example;
-                const exampleText = document.querySelector(`[data-example="${exampleType}"]:not(.example-btn)`);
-                
-                if (exampleText && playgroundInput) {
-                    playgroundInput.value = exampleText.textContent;
-                    playgroundResult.textContent = optimizeEmDashes(exampleText.textContent);
-                }
-
-                // Update active button
-                exampleButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // Copy functionality
-        if (copyButton && playgroundResult) {
-            copyButton.addEventListener('click', function() {
-                const text = playgroundResult.textContent;
-                if (text && text !== 'Your optimized text will appear here...') {
-                    navigator.clipboard.writeText(text).then(() => {
-                        this.textContent = '✅ Copied!';
-                        setTimeout(() => {
-                            this.textContent = '📋 Copy';
-                        }, 2000);
-                    });
-                }
-            });
-        }
-
-        // FAQ functionality
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.parentElement;
-                const answer = faqItem.querySelector('.faq-answer');
-                
-                // Toggle this FAQ
-                faqItem.classList.toggle('active');
-                
-                // Close other FAQs
-                faqQuestions.forEach(otherQuestion => {
-                    if (otherQuestion !== this) {
-                        otherQuestion.parentElement.classList.remove('active');
-                    }
-                });
-            });
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animation on scroll (simple implementation)
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('[data-aos]');
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('aos-animate');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', animateOnScroll);
-        document.addEventListener('DOMContentLoaded', animateOnScroll);
-    </script>
 </body>
 </html>
