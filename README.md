@@ -1,4 +1,4 @@
-# Em Dash Remover Chrome Extension
+# Em Dash Optimizer Chrome Extension
 
 A Chrome extension that helps you quickly remove or replace em dashes (—) from text copied from LLMs and other sources.
 
