@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Animated Background Layers -->
+    <div class="background-layers">
+        <div class="mesh-gradient"></div>
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="gradient-overlay"></div>
+        <div class="cursor-glow" id="cursorGlow"></div>
+    </div>
+    
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
@@ -85,37 +102,170 @@
 
         <!-- Use Cases Section -->
         <section id="use-cases" class="use-cases">
-            <h2 class="section-title">Perfect For</h2>
-            <div class="use-cases-grid">
-                <div class="use-case">
-                    <div class="use-case-icon">📝</div>
-                    <h3>Resume & CV Editing</h3>
-                    <p>Professional documents free of distracting em dash overuse. Perfect punctuation for career materials.</p>
+            <div class="section-header">
+                <h2 class="section-title">Perfect For</h2>
+                <p class="section-subtitle">See how Em Dash Optimizer transforms real-world content</p>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup resume-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Resume.pdf</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">Experienced developer—proficient in React—passionate about UI/UX—seeking senior role</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">Experienced developer, proficient in React, passionate about UI/UX, seeking senior role</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">📝</div>
+                            <h3>Resume & CV Editing</h3>
+                            <p>Professional documents free of distracting em dash overuse. Perfect punctuation for career materials that make the right impression.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup blog-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Blog Article</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">AI technology—while powerful—can be overwhelming—especially for beginners</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">AI technology, while powerful, can be overwhelming, especially for beginners</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">✍️</div>
+                            <h3>Content Writing</h3>
+                            <p>Blog posts, articles, and copywriting with clean, readable punctuation that flows naturally and keeps readers engaged.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup social-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Social Post</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">Just launched our new app—it's amazing—check it out—link in bio</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">Just launched our new app! It's amazing. Check it out—link in bio</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">📱</div>
+                            <h3>Social Media Content</h3>
+                            <p>Posts and captions with engaging, well-punctuated text that maximizes impact within character limits.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup academic-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Research Paper</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">This study—conducted over two years—reveals significant findings—particularly in emerging markets</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">This study, conducted over two years, reveals significant findings, particularly in emerging markets</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">🎓</div>
+                            <h3>Academic Writing</h3>
+                            <p>Research papers, essays, and dissertations with proper scholarly punctuation standards that meet publication requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup business-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Business Report</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">Q4 revenue—exceeding expectations—increased by 23%—marking our best quarter</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">Q4 revenue, exceeding expectations, increased by 23%, marking our best quarter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">💼</div>
+                            <h3>Business Documents</h3>
+                            <p>Reports, proposals, and presentations with professional, polished typography that communicates clearly and effectively.</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case-card">
+                        <div class="card-visual">
+                            <div class="mockup email-mockup">
+                                <div class="mockup-header">
+                                    <span class="mockup-title">Professional Email</span>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="before-text">
+                                        <span class="highlight-bad">Following up on our meeting—as discussed—I'm attaching the proposal—please review</span>
+                                    </div>
+                                    <div class="arrow">↓</div>
+                                    <div class="after-text">
+                                        <span class="highlight-good">Following up on our meeting: as discussed, I'm attaching the proposal. Please review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-icon">📧</div>
+                            <h3>Email & Communication</h3>
+                            <p>Professional correspondence that's clear, concise, and properly formatted for maximum impact and clarity.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="use-case">
-                    <div class="use-case-icon">✍️</div>
-                    <h3>Content Writing</h3>
-                    <p>Blog posts, articles, and copywriting with clean, readable punctuation that flows naturally.</p>
-                </div>
-                <div class="use-case">
-                    <div class="use-case-icon">🎓</div>
-                    <h3>Academic Writing</h3>
-                    <p>Research papers, essays, and dissertations with proper scholarly punctuation standards.</p>
-                </div>
-                <div class="use-case">
-                    <div class="use-case-icon">💼</div>
-                    <h3>Business Documents</h3>
-                    <p>Reports, proposals, and presentations with professional, polished typography.</p>
-                </div>
-                <div class="use-case">
-                    <div class="use-case-icon">📧</div>
-                    <h3>Email & Communication</h3>
-                    <p>Professional correspondence that's clear, concise, and properly formatted.</p>
-                </div>
-                <div class="use-case">
-                    <div class="use-case-icon">📱</div>
-                    <h3>Social Media Content</h3>
-                    <p>Posts and captions with engaging, well-punctuated text that's easy to read.</p>
+                
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">‹</button>
+                    <div class="nav-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+                    <button class="nav-btn next-btn" onclick="scrollCarousel(1)">›</button>
                 </div>
             </div>
         </section>
@@ -213,5 +363,87 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // Cursor glow effect
+        const cursorGlow = document.getElementById('cursorGlow');
+        
+        if (cursorGlow) {
+            document.addEventListener('mousemove', (e) => {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+            });
+        }
+
+        // Carousel functionality
+        let currentSlideIndex = 0;
+        const carouselTrack = document.querySelector('.carousel-track');
+        const cards = document.querySelectorAll('.use-case-card');
+        const dots = document.querySelectorAll('.nav-dots .dot');
+        const totalSlides = cards.length;
+
+        function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth + 24; // card width + gap
+            const offset = -currentSlideIndex * cardWidth;
+            carouselTrack.style.transform = `translateX(${offset}px)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        function scrollCarousel(direction) {
+            currentSlideIndex += direction;
+            
+            if (currentSlideIndex < 0) {
+                currentSlideIndex = totalSlides - 1;
+            } else if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            }
+            
+            updateCarousel();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            updateCarousel();
+        }
+
+        // Auto-scroll carousel
+        setInterval(() => {
+            scrollCarousel(1);
+        }, 5000);
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let isDragging = false;
+
+        carouselTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        carouselTrack.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+        });
+
+        carouselTrack.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+            
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    scrollCarousel(1);
+                } else {
+                    scrollCarousel(-1);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
