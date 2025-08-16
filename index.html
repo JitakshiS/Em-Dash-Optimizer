@@ -3,75 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Dash Optimizer - Smart Typography for the Modern Web</title>
-    <meta name="description" content="Transform your text with intelligent em dash optimization. Perfect for writers, editors, and anyone working with AI-generated content.">
+    <title>Em Dash Optimizer - Chrome Extension</title>
+    <meta name="description" content="Optimize em dashes intelligently: comma, semicolon, or en dash with correct spacing. Clean up text from LLMs instantly.">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon32.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="gradient-overlay"></div>
-        <canvas id="particleCanvas"></canvas>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="icons/logo.svg" alt="Em Dash Optimizer" class="nav-logo">
-                <span class="nav-title">Em Dash Optimizer</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#demo" class="nav-link">Demo</a></li>
-                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-                <li><a href="#install" class="nav-link nav-cta">Get Extension</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <div class="container">
-        <!-- Hero Section with Typing Animation -->
+        <!-- Hero Section -->
         <header class="hero">
             <div class="hero-content">
-                <div class="hero-badge">Chrome Extension</div>
-                <h1 class="hero-title">
-                    Transform Your Text with
-                    <span class="typing-container">
-                        <span class="typing-text" id="typingText"></span>
-                        <span class="cursor"></span>
-                    </span>
-                </h1>
-                <p class="hero-description">
-                    The intelligent Chrome extension that optimizes em dashes in your text. 
-                    Perfect for cleaning up AI-generated content, academic writing, and professional documents.
-                </p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">10K+</div>
-                        <div class="stat-label">Active Users</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">1M+</div>
-                        <div class="stat-label">Dashes Optimized</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">4.9★</div>
-                        <div class="stat-label">User Rating</div>
-                    </div>
+                <div class="brand">
+                    <img src="icons/logo.svg" alt="Em Dash Optimizer Logo" class="logo">
+                    <h1 class="title">Em Dash Optimizer</h1>
                 </div>
-
-                <div class="hero-cta">
-                    <a href="#install" class="btn btn-primary btn-large">
-                        <span class="btn-icon">🚀</span>
-                        Install Free Extension
-                    </a>
-                    <a href="#demo" class="btn btn-secondary btn-large">
-                        <span class="btn-icon">▶️</span>
-                        Watch Demo
-                    </a>
+                <p class="subtitle">Optimize em dashes intelligently: comma, semicolon, or en dash with correct spacing</p>
+                <p class="description">Clean up text from LLMs and other sources instantly. One-click solution for better typography.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#install" class="btn btn-accent">Install Extension</a>
+                    <a href="#demo" class="btn btn-outline">See Demo</a>
                 </div>
             </div>
             
@@ -95,178 +46,120 @@
             </div>
         </header>
 
-        <!-- Interactive Demo Section -->
-        <section id="demo" class="demo-section">
-            <div class="section-header">
-                <h2 class="section-title">Try It Live</h2>
-                <p class="section-subtitle">Paste your text and see the magic happen instantly</p>
-            </div>
-            
-            <div class="demo-container">
-                <div class="demo-input">
-                    <label class="demo-label">Your Text</label>
-                    <textarea id="demoInput" class="demo-textarea" placeholder="Paste text with em dashes here—like this—and watch them transform...">AI language models—especially GPT—tend to overuse em dashes—creating text that's hard to read—and unnecessarily dramatic.</textarea>
-                </div>
-                
-                <div class="demo-controls">
-                    <button onclick="optimizeDemo()" class="btn btn-accent">
-                        <span class="btn-icon">✨</span>
-                        Optimize
-                    </button>
-                    <select id="replacementOption" class="demo-select">
-                        <option value="smart">Smart Replace</option>
-                        <option value="comma">Use Commas</option>
-                        <option value="semicolon">Use Semicolons</option>
-                        <option value="remove">Remove All</option>
-                    </select>
-                </div>
-                
-                <div class="demo-output">
-                    <label class="demo-label">Optimized Result</label>
-                    <div id="demoOutput" class="demo-result"></div>
-                    <button onclick="copyResult()" class="copy-btn">
-                        <span class="copy-icon">📋</span>
-                        Copy Result
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Grid with Icons -->
-        <section id="features" class="features-section">
-            <div class="section-header">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-subtitle">Everything you need for perfect typography</p>
-            </div>
-            
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2 class="section-title">Features</h2>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">⚡</span>
-                    </div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">Process thousands of words in milliseconds with our optimized algorithm</p>
+                <div class="feature">
+                    <div class="feature-icon">📋</div>
+                    <h3>One-click clipboard loading</h3>
+                    <p>Automatically loads your clipboard content for instant processing</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎯</span>
-                    </div>
-                    <h3 class="feature-title">Context Aware</h3>
-                    <p class="feature-description">Smart detection understands when to use commas, semicolons, or en dashes</p>
+                <div class="feature">
+                    <div class="feature-icon">❌</div>
+                    <h3>Remove em dashes</h3>
+                    <p>Completely removes all em dashes from your text</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">📋</span>
-                    </div>
-                    <h3 class="feature-title">Clipboard Magic</h3>
-                    <p class="feature-description">One-click access to clipboard content for instant optimization</p>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Smart replacement</h3>
+                    <p>Replace em dashes with any character you want</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🔄</span>
-                    </div>
-                    <h3 class="feature-title">Bulk Processing</h3>
-                    <p class="feature-description">Handle entire documents or multiple text selections at once</p>
+                <div class="feature">
+                    <div class="feature-icon">👀</div>
+                    <h3>Live preview</h3>
+                    <p>See your text with highlighted em dashes before processing</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">🎨</span>
-                    </div>
-                    <h3 class="feature-title">Custom Rules</h3>
-                    <p class="feature-description">Define your own replacement patterns and preferences</p>
+                <div class="feature">
+                    <div class="feature-icon">⌨️</div>
+                    <h3>Keyboard shortcuts</h3>
+                    <p>Quick shortcuts for faster workflow</p>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <span class="feature-icon">📊</span>
-                    </div>
-                    <h3 class="feature-title">Usage Analytics</h3>
-                    <p class="feature-description">Track how many dashes you've optimized and time saved</p>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern UI</h3>
+                    <p>Clean, intuitive interface that matches your workflow</p>
                 </div>
             </div>
         </section>
 
-        <!-- How It Works -->
-        <section id="how-it-works" class="how-section">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Three simple steps to better typography</p>
+        <!-- Demo Section -->
+        <section id="demo" class="demo">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="demo-container">
+                <div class="demo-before">
+                    <h4>Before</h4>
+                    <div class="demo-text">
+                        The solution—which took hours to find—was simple<br>
+                        Privacy, security, and performance—these are our priorities
+                    </div>
+                </div>
+                <div class="demo-arrow">→</div>
+                <div class="demo-after">
+                    <h4>After</h4>
+                    <div class="demo-text">
+                        The solution, which took hours to find, was simple<br>
+                        Privacy, security, and performance: these are our priorities
+                    </div>
+                </div>
             </div>
-            
-            <div class="steps-container">
+        </section>
+
+        <!-- Installation Section -->
+        <section id="install" class="install">
+            <h2 class="section-title">Quick Installation</h2>
+            <div class="install-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3 class="step-title">Select Your Text</h3>
-                        <p class="step-description">Highlight any text on a webpage or paste from clipboard</p>
+                        <h3>Download Extension</h3>
+                        <p>Download or clone the extension files to your computer</p>
                     </div>
                 </div>
-                
-                <div class="step-connector"></div>
-                
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3 class="step-title">Choose Your Style</h3>
-                        <p class="step-description">Pick from smart replacement, commas, semicolons, or removal</p>
+                        <h3>Open Chrome Extensions</h3>
+                        <p>Navigate to <code>chrome://extensions/</code> in your browser</p>
                     </div>
                 </div>
-                
-                <div class="step-connector"></div>
-                
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3 class="step-title">Copy & Use</h3>
-                        <p class="step-description">Get your optimized text instantly ready to use anywhere</p>
+                        <h3>Enable Developer Mode</h3>
+                        <p>Toggle the switch in the top-right corner</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Load Unpacked</h3>
+                        <p>Click "Load unpacked" and select the extension folder</p>
                     </div>
                 </div>
             </div>
+            
+            <div class="download-section">
+                <a href="#" class="btn btn-accent btn-large">Download Extension</a>
+                <p class="download-note">Free • Open Source • No Data Collection</p>
+            </div>
         </section>
 
-        <!-- Installation CTA -->
-        <section id="install" class="install-section">
-            <div class="install-card">
-                <div class="install-content">
-                    <h2 class="install-title">Ready to Optimize Your Writing?</h2>
-                    <p class="install-description">
-                        Join thousands of writers, editors, and professionals who've already transformed their text
-                    </p>
-                    <div class="install-buttons">
-                        <a href="https://chrome.google.com/webstore" class="btn btn-chrome">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" alt="Chrome" class="btn-logo">
-                            Add to Chrome - It's Free
-                        </a>
-                        <div class="install-meta">
-                            <span class="meta-item">✓ No credit card required</span>
-                            <span class="meta-item">✓ 2-click installation</span>
-                            <span class="meta-item">✓ Works instantly</span>
-                        </div>
-                    </div>
+        <!-- Keyboard Shortcuts -->
+        <section class="shortcuts">
+            <h2 class="section-title">Keyboard Shortcuts</h2>
+            <div class="shortcuts-list">
+                <div class="shortcut">
+                    <kbd>Ctrl/Cmd + L</kbd>
+                    <span>Load clipboard</span>
                 </div>
-                <div class="install-visual">
-                    <div class="browser-mockup">
-                        <div class="browser-bar">
-                            <div class="browser-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <div class="browser-address">chrome://extensions</div>
-                        </div>
-                        <div class="browser-content">
-                            <div class="extension-card">
-                                <img src="icons/logo.svg" alt="Extension" class="extension-icon">
-                                <div class="extension-info">
-                                    <h4>Em Dash Optimizer</h4>
-                                    <p>Enabled</p>
-                                </div>
-                                <div class="toggle-switch active"></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="shortcut">
+                    <kbd>Ctrl/Cmd + R</kbd>
+                    <span>Remove em dashes</span>
+                </div>
+                <div class="shortcut">
+                    <kbd>Ctrl/Cmd + E</kbd>
+                    <span>Replace em dashes</span>
                 </div>
             </div>
         </section>
@@ -274,23 +167,14 @@
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="icons/logo.svg" alt="Em Dash Optimizer" class="footer-logo">
-                    <p class="footer-tagline">Making text beautiful, one dash at a time</p>
-                </div>
+                <p>&copy; 2024 Em Dash Optimizer. Open source and free to use.</p>
                 <div class="footer-links">
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Service</a>
-                    <a href="https://github.com/JitakshiS/Em-Dash-Optimizer" class="footer-link">GitHub</a>
-                    <a href="#" class="footer-link">Support</a>
-                </div>
-                <div class="footer-copy">
-                    <p>&copy; 2024 Em Dash Optimizer. All rights reserved.</p>
+                    <a href="#">GitHub</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Documentation</a>
                 </div>
             </div>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
