@@ -244,7 +244,7 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 30% 20%, rgba(247, 255, 60, 0.08) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 30% 20%, rgba(247, 255, 60, 0.03) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -326,16 +326,14 @@ html, body {
 }
 
 .floating-card {
-  background: rgba(18, 18, 18, 0.4);
-  border: 1px solid rgba(247, 255, 60, 0.15);
-  border-radius: 20px;
-  padding: 28px;
+  background: rgba(18, 18, 18, 0.6);
+  border: 1px solid rgba(247, 255, 60, 0.08);
+  border-radius: 16px;
+  padding: 24px;
   backdrop-filter: blur(20px);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 8px 16px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(247, 255, 60, 0.1),
-    0 0 0 1px rgba(247, 255, 60, 0.05);
+    0 15px 30px rgba(0, 0, 0, 0.2),
+    0 6px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(0);
   transition: all 0.4s ease;
   animation: gentleFloat 6s ease-in-out infinite;
@@ -350,9 +348,9 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), rgba(247, 255, 60, 0.6), var(--accent));
-  border-radius: 24px 24px 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(247, 255, 60, 0.3), transparent);
+  border-radius: 16px 16px 0 0;
 }
 
 .floating-card::after {
@@ -362,7 +360,7 @@ html, body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(247, 255, 60, 0.03), transparent);
+  background: linear-gradient(45deg, transparent, rgba(247, 255, 60, 0.02), transparent);
   transform: rotate(45deg);
   animation: shimmer 3s ease-in-out infinite;
 }
@@ -589,25 +587,16 @@ section {
 }
 
 .feature-number {
-  font-size: 8rem;
-  font-weight: 100;
+  font-size: 4rem;
+  font-weight: 200;
   color: var(--accent);
   opacity: 1;
   line-height: 1;
-  filter: drop-shadow(0 0 40px rgba(247, 255, 60, 0.3));
+  filter: drop-shadow(0 0 20px rgba(247, 255, 60, 0.4));
   flex-shrink: 0;
   position: relative;
   z-index: 10;
-  text-shadow: 0 0 20px rgba(247, 255, 60, 0.5);
-  background: rgba(11, 11, 11, 0.8);
-  backdrop-filter: blur(5px);
-  border-radius: 20px;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(247, 255, 60, 0.3);
+  text-shadow: 0 0 15px rgba(247, 255, 60, 0.3);
 }
 
 .feature-content {
@@ -854,7 +843,7 @@ section {
 }
 
 .mockup-content {
-  padding: 16px;
+  padding: 16px 20px;
   font-size: 0.75rem;
   line-height: 1.4;
 }
@@ -998,6 +987,7 @@ section {
 
 .blog-content {
   margin-bottom: 10px;
+  padding: 0 12px;
 }
 
 .blog-paragraph {
@@ -1068,7 +1058,7 @@ section {
 }
 
 .social-content {
-  padding: 0 8px;
+  padding: 0 12px;
   margin-bottom: 8px;
 }
 
@@ -1655,20 +1645,7 @@ section {
 }
 
 .install-steps::before {
-  content: '';
-  position: absolute;
-  left: 50px;
-  top: 60px;
-  bottom: 60px;
-  width: 2px;
-  background: linear-gradient(to bottom, 
-    transparent 0%, 
-    rgba(247, 255, 60, 0.3) 20%, 
-    rgba(247, 255, 60, 0.6) 50%, 
-    rgba(247, 255, 60, 0.3) 80%, 
-    transparent 100%);
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(247, 255, 60, 0.2);
+  display: none; /* Removed connecting line for cleaner look */
 }
 
 .step {
@@ -1859,8 +1836,8 @@ section {
 
 .shortcuts-list {
   display: grid;
-  gap: 24px;
-  max-width: 600px;
+  gap: 32px;
+  max-width: 700px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -1870,11 +1847,11 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 32px;
+  padding: 28px 36px;
   background: rgba(18, 18, 18, 0.4);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(247, 255, 60, 0.15);
-  border-radius: 20px;
+  border: 1px solid rgba(247, 255, 60, 0.1);
+  border-radius: 16px;
   box-shadow: 
     0 12px 24px rgba(0, 0, 0, 0.3),
     0 6px 12px rgba(0, 0, 0, 0.2),
@@ -1946,16 +1923,18 @@ section {
 }
 
 .step-action {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--fg);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .step-method {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--muted);
   font-weight: 400;
+  line-height: 1.5;
 }
 
 .workflow-note {
@@ -2183,7 +2162,7 @@ kbd::before {
   }
   
   .install-steps::before {
-    left: 40px;
+    display: none;
   }
   
   .step-number {
@@ -2197,7 +2176,7 @@ kbd::before {
   }
   
   .install-steps::before {
-    left: 25px;
+    display: none;
   }
   
   .step {
