@@ -327,7 +327,7 @@ html, body {
 
 .floating-card {
   background: rgba(18, 18, 18, 0.6);
-  border: none;
+  border: 1px solid rgba(247, 255, 60, 0.12);
   border-radius: 16px;
   padding: 24px;
   backdrop-filter: blur(20px);
@@ -430,13 +430,13 @@ html, body {
 .code-preview .before-text {
   color: var(--fg);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .code-preview .after-text {
   color: var(--fg);
   display: block;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .code-preview .highlight-dash {
@@ -458,8 +458,8 @@ html, body {
 .code-preview .arrow-divider {
   text-align: center;
   color: var(--accent);
-  font-size: 1.2rem;
-  margin: 8px 0;
+  font-size: 1.1rem;
+  margin: 4px 0;
   font-weight: bold;
 }
 
