@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em Dash Optimizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">—</span>
+                <h1>Em Dash Optimizer</h1>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="input-section">
+                <label for="inputText">Paste your text with em dashes:</label>
+                <textarea 
+                    id="inputText" 
+                    placeholder="Paste text like: &quot;The solution—which works great—saves time&quot;"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <div class="action-section">
+                <button id="optimizeBtn" class="btn-primary">
+                    <span class="btn-icon">✨</span>
+                    Optimize Text
+                </button>
+            </div>
+
+            <div class="output-section" id="outputSection" style="display: none;">
+                <div class="before-after">
+                    <div class="text-block before">
+                        <h3>Before:</h3>
+                        <div class="text-content" id="beforeText"></div>
+                    </div>
+                    
+                    <div class="arrow">→</div>
+                    
+                    <div class="text-block after">
+                        <h3>After:</h3>
+                        <div class="text-content" id="afterText"></div>
+                    </div>
+                </div>
+
+                <button id="copyBtn" class="btn-secondary">
+                    <span class="btn-icon">📋</span>
+                    Copy Optimized Text
+                </button>
+            </div>
+
+            <div class="status" id="status"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
