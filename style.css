@@ -327,7 +327,7 @@ html, body {
 
 .floating-card {
   background: rgba(18, 18, 18, 0.6);
-  border: 1px solid rgba(247, 255, 60, 0.08);
+  border: none;
   border-radius: 16px;
   padding: 24px;
   backdrop-filter: blur(20px);
@@ -372,7 +372,7 @@ html, body {
 
 .floating-card:hover {
   transform: translateY(-6px) scale(1.02);
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
   box-shadow: 
     0 24px 48px rgba(0, 0, 0, 0.4),
     0 12px 24px rgba(0, 0, 0, 0.3),
@@ -624,7 +624,7 @@ section {
 }
 
 .feature-content:hover {
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(247, 255, 60, 0.1),
@@ -711,7 +711,7 @@ section {
   flex: 0 0 420px;
   background: rgba(18, 18, 18, 0.4);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(247, 255, 60, 0.15);
+  border: none;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 
@@ -755,7 +755,7 @@ section {
     0 16px 32px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(247, 255, 60, 0.2),
     inset 0 2px 0 rgba(247, 255, 60, 0.15);
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
 }
 
 .use-case-card:hover::before {
@@ -767,8 +767,8 @@ section {
 }
 
 .card-visual {
-  height: 280px;
-  padding: 24px;
+  height: 320px;
+  padding: 16px;
   background: linear-gradient(135deg, rgba(11, 11, 11, 0.8) 0%, rgba(18, 18, 18, 0.6) 100%);
   display: flex;
   align-items: center;
@@ -794,15 +794,21 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .use-case-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.use-case-card:hover .use-case-image {
+  transform: scale(1.05);
 }
 
 .mockup {
@@ -824,7 +830,7 @@ section {
 
 .mockup:hover {
   transform: scale(1.05);
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
   box-shadow: 
     0 12px 32px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(247, 255, 60, 0.15),
@@ -1484,7 +1490,7 @@ section {
     0 16px 32px rgba(0, 0, 0, 0.4),
     0 0 0 1px rgba(247, 255, 60, 0.2),
     inset 0 2px 0 rgba(247, 255, 60, 0.15);
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
 }
 
 .demo-before:hover::after, .demo-after:hover::after {
@@ -1559,7 +1565,7 @@ section {
   line-height: 1.7;
   color: var(--fg);
   background: rgba(11, 11, 11, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: none;
   border-radius: 12px;
   padding: 20px;
   position: relative;
@@ -1789,7 +1795,7 @@ section {
 }
 
 .step:hover .step-content {
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(247, 255, 60, 0.1),
@@ -1892,7 +1898,7 @@ section {
   padding: 28px 36px;
   background: rgba(18, 18, 18, 0.4);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(247, 255, 60, 0.1);
+  border: none;
   border-radius: 16px;
   box-shadow: 
     0 12px 24px rgba(0, 0, 0, 0.3),
@@ -1924,7 +1930,7 @@ section {
     0 10px 20px rgba(0, 0, 0, 0.3),
     0 0 0 1px rgba(247, 255, 60, 0.2),
     inset 0 2px 0 rgba(247, 255, 60, 0.15);
-  border-color: rgba(247, 255, 60, 0.3);
+  /* border-color: rgba(247, 255, 60, 0.3); */
 }
 
 .shortcut:hover::after {
@@ -2149,7 +2155,7 @@ kbd::before {
   }
   
   .card-visual {
-    height: 200px;
+    height: 240px;
   }
 }
 
@@ -2253,8 +2259,8 @@ kbd::before {
   }
   
   .card-visual {
-    height: 180px;
-    padding: 15px;
+    height: 200px;
+    padding: 12px;
   }
   
   .mockup-content {
@@ -2280,8 +2286,8 @@ kbd::before {
   }
   
   .card-visual {
-    height: 160px;
-    padding: 10px;
+    height: 180px;
+    padding: 8px;
   }
   
   .card-content {
