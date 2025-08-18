@@ -53,10 +53,12 @@
                     <div class="code-preview">
                         <pre><code class="language-text">
 <span class="comment">// Before optimization</span>
-"AI models—like GPT—often overuse em dashes—it's annoying"
+<span class="before-text">"The solution<span class="highlight-dash">—</span>which works great<span class="highlight-dash">—</span>saves time"</span>
+
+<div class="arrow-divider">↓</div>
 
 <span class="comment">// After optimization</span>
-"AI models, like GPT, often overuse em dashes; it's annoying"
+<span class="after-text">"The solution<span class="highlight-comma">,</span> which works great<span class="highlight-comma">,</span> saves time"</span>
                         </code></pre>
                     </div>
                 </div>

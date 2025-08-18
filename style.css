@@ -416,12 +416,51 @@ html, body {
 .code-preview {
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  line-height: 1.6;
-  padding: 0 16px;
+  line-height: 1.8;
+  padding: 0 20px;
 }
 
 .code-preview .comment {
   color: var(--muted);
+  font-style: italic;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.code-preview .before-text {
+  color: var(--fg);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.code-preview .after-text {
+  color: var(--fg);
+  display: block;
+  margin-top: 8px;
+}
+
+.code-preview .highlight-dash {
+  color: #ff6b6b;
+  font-weight: bold;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.code-preview .highlight-comma {
+  color: #4ecdc4;
+  font-weight: bold;
+  background: rgba(78, 205, 196, 0.1);
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.code-preview .arrow-divider {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin: 8px 0;
+  font-weight: bold;
 }
 
 /* Premium Buttons */
