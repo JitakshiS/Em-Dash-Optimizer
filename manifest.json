@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Em Dash Optimizer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Optimize em dashes intelligently: comma, semicolon, or en dash with correct spacing",
   "permissions": [
     "clipboardRead",
@@ -12,16 +12,12 @@
     "default_title": "Em Dash Optimizer",
     "default_icon": {
       "16": "icons/icon16.png",
-      "19": "icons/icon19.png",
-      "32": "icons/icon32.png",
-      "38": "icons/icon38.png",
-      "48": "icons/icon48.png"
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
   },
   "icons": {
     "16": "icons/icon16.png",
-    "24": "icons/icon24.png",
-    "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },

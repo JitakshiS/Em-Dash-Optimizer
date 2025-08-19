@@ -1,0 +1,158 @@
+# Chrome Web Store Publishing Plan
+# Em Dash Optimizer Extension
+
+## CURRENT STATUS
+- Landing page: COMPLETE ✅
+- Extension codebase: COMPLETE ✅ (last commit 34e5a3a)
+- Icons: Added but need integration
+- UI: Needs stabilization
+
+## PHASE 1: PRE-PUBLISHING SETUP
+
+### 1.1 Chrome Web Store Developer Account
+- [ ] Go to https://chrome.google.com/webstore/devconsole
+- [ ] Pay $5 one-time registration fee
+- [ ] Verify developer identity
+- [ ] Complete account setup
+
+### 1.2 Extension Icons (REQUIRED)
+- [ ] 16x16px icon (toolbar)
+- [ ] 48x48px icon (extensions page)  
+- [ ] 128x128px icon (Chrome Web Store)
+- [ ] All icons should be PNG format
+- [ ] Must be clear and recognizable at all sizes
+
+### 1.3 Extension Testing
+- [ ] Test in Chrome developer mode
+- [ ] Verify all functionality works
+- [ ] Test on different websites
+- [ ] Check clipboard permissions work
+- [ ] Ensure no console errors
+
+## PHASE 2: STORE LISTING ASSETS
+
+### 2.1 Screenshots (REQUIRED)
+Minimum 1, Maximum 5 screenshots:
+- [ ] 1280x800px or 640x400px
+- [ ] Show extension popup in action
+- [ ] Before/after text transformation
+- [ ] Clean, professional appearance
+
+### 2.2 Store Tiles (REQUIRED)
+- [ ] Small tile: 440x280px
+- [ ] Large tile: 920x680px (optional)
+- [ ] Marquee: 1400x560px (for featured placement)
+
+### 2.3 Description Content
+Short description (132 chars max):
+"Instantly convert em dashes to proper punctuation: commas, semicolons, or en dashes. Clean up AI-generated text effortlessly."
+
+Detailed description (PREPARED):
+- Key features list
+- Use cases
+- How it works
+- Privacy-focused messaging
+
+## PHASE 3: LEGAL & PRIVACY
+
+### 3.1 Privacy Policy (REQUIRED)
+- [ ] Use provided PRIVACY_POLICY.md
+- [ ] Host on website or include in extension
+- [ ] Clearly state: "No data collection"
+- [ ] Explain clipboard access usage
+
+### 3.2 Permissions Justification
+- "activeTab": Required for extension operation
+- Clipboard: For paste/copy functionality
+
+## PHASE 4: SUBMISSION PROCESS
+
+### 4.1 Package Extension
+- [ ] Create ZIP file of extension folder
+- [ ] Include: manifest.json, all HTML/CSS/JS files, icons
+- [ ] Exclude: node_modules, .git, development files
+- [ ] Maximum size: 128MB (our extension is <1MB)
+
+### 4.2 Upload to Chrome Web Store
+1. Go to Chrome Web Store Developer Dashboard
+2. Click "New Item"
+3. Upload ZIP file
+4. Fill out store listing:
+   - Title: "Em Dash Optimizer"
+   - Category: "Productivity"
+   - Language: English
+   - Visibility: Public
+
+### 4.3 Complete Store Listing
+- [ ] Upload all screenshots
+- [ ] Add store tiles
+- [ ] Set privacy policy URL
+- [ ] Review all information
+- [ ] Save as draft
+
+### 4.4 Submit for Review
+- [ ] Click "Submit for Review"
+- [ ] Wait for Google review (1-7 days typical)
+- [ ] Respond to any feedback if rejected
+
+## PHASE 5: POST-PUBLISHING
+
+### 5.1 Monitor Launch
+- [ ] Check extension appears in store
+- [ ] Test installation from store
+- [ ] Monitor initial user feedback
+- [ ] Track download statistics
+
+### 5.2 Ongoing Maintenance
+- [ ] Respond to user reviews
+- [ ] Monitor for Chrome updates that affect extension
+- [ ] Plan feature updates if needed
+- [ ] Maintain privacy policy compliance
+
+## COMMON REJECTION REASONS TO AVOID
+
+1. **Permissions**: Only request necessary permissions
+2. **Privacy**: Must have clear privacy policy
+3. **Functionality**: Extension must work as described  
+4. **Quality**: Professional screenshots and description
+5. **Compliance**: Follow Chrome Web Store policies
+
+## FILES READY FOR SUBMISSION
+
+✅ manifest.json - Proper configuration
+✅ popup.html - User interface
+✅ popup.css - Styling
+✅ popup.js - Core functionality
+✅ content.js - Web integration
+✅ README.md - Documentation
+✅ PRIVACY_POLICY.md - Privacy compliance
+✅ STORE_DESCRIPTION.md - Store listing content
+
+## NEXT IMMEDIATE STEPS
+
+1. Stabilize extension UI (resolve current issues)
+2. Add proper icons to extension/icons/
+3. Test extension thoroughly in Chrome
+4. Create store screenshots
+5. Set up developer account
+6. Package and submit
+
+## ESTIMATED TIMELINE
+
+- Setup & Testing: 1-2 days
+- Asset Creation: 1 day  
+- Store Submission: 1 day
+- Google Review: 1-7 days
+- **Total: 4-10 days to published**
+
+## CONTACT FOR ISSUES
+
+For Chrome Web Store support:
+https://support.google.com/chrome_webstore/
+
+## NOTES
+
+- Keep this plan updated as you progress
+- Check off completed items
+- Extension is ready for publishing once UI is finalized
+- All major components are already prepared
