@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Em Dash Optimizer</title>
+    <meta name="description" content="Privacy Policy for Em Dash Optimizer Chrome Extension - No data collection, privacy-focused text processing">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-yellow: #f7ff3c;
+            --primary-dark: #0a0a0a;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --background: #ffffff;
+            --border-light: #e5e5e5;
+            --background-subtle: #fafafa;
+        }
+        
+        [data-theme="dark"] {
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --background: #0a0a0a;
+            --border-light: #333333;
+            --background-subtle: #111111;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--background);
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+            background: var(--background);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        
+        .logo-icon {
+            background: var(--primary-yellow);
+            color: var(--primary-dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--background-subtle);
+        }
+        
+        /* Main Content */
+        .main {
+            padding: 60px 0;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .highlight-box {
+            background: var(--primary-yellow);
+            color: var(--primary-dark);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .highlight-box strong {
+            font-size: 18px;
+        }
+        
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 40px 0 20px 0;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 30px 0 15px 0;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+        
+        ul {
+            margin: 16px 0 16px 24px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .meta-info {
+            background: var(--background-subtle);
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            margin: 20px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border-light);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            background: var(--background-subtle);
+        }
+        
+        .footer-content {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--background);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-light);
+            font-size: 14px;
+            margin: 0 4px;
+        }
+        
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 36px;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="https://em-dash-optimizer.vercel.app/" class="logo">
+                    <span class="logo-icon">—</span>
+                    <span class="logo-text">Em Dash Optimizer</span>
+                </a>
+                <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Privacy Policy</h1>
+                <p class="page-subtitle">Your privacy is our priority. We believe in complete transparency about how we handle your data.</p>
+            </div>
+
+            <div class="highlight-box">
+                <strong>TL;DR:</strong> We don't collect any data. Your text stays on your device. Complete privacy guaranteed.
+            </div>
+
+            <div class="content">
+                <div class="meta-info">
+                    <strong>Last updated:</strong> August 23, 2025
+                </div>
+
+                <h2>Overview</h2>
+                <p>Em Dash Optimizer is committed to protecting your privacy. This extension processes text locally on your device and does not collect, store, or transmit any personal information.</p>
+
+                <h2>Data Collection</h2>
+                <p><strong>We do not collect any data.</strong> Specifically:</p>
+                <ul>
+                    <li>No personal information is collected</li>
+                    <li>No usage analytics are tracked</li>
+                    <li>No text content is stored or transmitted</li>
+                    <li>No browsing history is accessed</li>
+                    <li>No cookies are used</li>
+                </ul>
+
+                <h2>Data Processing</h2>
+                <ul>
+                    <li>All text processing happens locally on your device</li>
+                    <li>Text content never leaves your browser</li>
+                    <li>Clipboard access is used only for convenience features (auto-paste and copy optimized text)</li>
+                    <li>No data is sent to external servers</li>
+                </ul>
+
+                <h2>Permissions Used</h2>
+                <p>The extension requests the following permissions:</p>
+
+                <h3>clipboardRead & clipboardWrite</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Auto-paste text containing em dashes and copy optimized results</li>
+                    <li><strong>Usage:</strong> Only activated when you use the extension interface</li>
+                    <li><strong>Data Access:</strong> Only processes text you explicitly paste or copy</li>
+                </ul>
+
+                <h2>Third Parties</h2>
+                <ul>
+                    <li>No data is shared with third parties</li>
+                    <li>No external services are used</li>
+                    <li>No tracking or analytics services are integrated</li>
+                </ul>
+
+                <h2>Data Security</h2>
+                <p>Since no data is collected or transmitted, there are no data security concerns. All processing occurs locally within your browser's secure environment.</p>
+
+                <h2>Children's Privacy</h2>
+                <p>This extension does not knowingly collect any information from children under 13 years of age.</p>
+
+                <h2>Changes to Privacy Policy</h2>
+                <p>Any changes to this privacy policy will be updated in this document. Users will be notified of significant changes through extension updates.</p>
+
+                <h2>Contact</h2>
+                <p>For privacy questions or concerns, please create an issue on our <a href="https://github.com/JitakshiS/Em-Dash-Optimizer/issues" style="color: var(--primary-yellow); text-decoration: none;">GitHub repository</a>.</p>
+
+                <h2>Compliance</h2>
+                <p>This extension complies with:</p>
+                <ul>
+                    <li>Chrome Web Store Developer Program Policies</li>
+                    <li>General Data Protection Regulation (GDPR)</li>
+                    <li>California Consumer Privacy Act (CCPA)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Free
+                </div>
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Open Source
+                </div>
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    No Data Collection
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://em-dash-optimizer.vercel.app/">Home</a>
+                <a href="https://github.com/JitakshiS/Em-Dash-Optimizer">GitHub</a>
+                <a href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a>
+            </div>
+            
+            <p>© 2025 Em Dash Optimizer. Built with privacy in mind.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const button = document.querySelector('.theme-toggle');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                button.textContent = '🌙 Dark';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                button.textContent = '☀️ Light';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const button = document.querySelector('.theme-toggle');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                button.textContent = '☀️ Light';
+            }
+        });
+    </script>
+</body>
+</html>
