@@ -26,19 +26,76 @@
         <div class="cursor-glow" id="cursorGlow"></div>
     </div>
     
+    <!-- Floating Feedback Button -->
+    <div class="feedback-button-container">
+        <button class="feedback-button" onclick="openFeedbackModal()">
+            <span class="feedback-icon">💬</span>
+            <span class="feedback-text">Share Feedback</span>
+        </button>
+    </div>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="feedback-modal" onclick="closeFeedbackModal(event)">
+        <div class="feedback-modal-content">
+            <h3>Share Your Feedback</h3>
+            <p>Help us improve Em Dash Optimizer! Your input is valuable.</p>
+            
+            <form class="feedback-form" onsubmit="submitFeedback(event)">
+                <div class="form-group">
+                    <label>How would you rate this extension?</label>
+                    <div class="star-rating">
+                        <input type="radio" name="rating" value="5" id="star5">
+                        <label for="star5">★</label>
+                        <input type="radio" name="rating" value="4" id="star4">
+                        <label for="star4">★</label>
+                        <input type="radio" name="rating" value="3" id="star3">
+                        <label for="star3">★</label>
+                        <input type="radio" name="rating" value="2" id="star2">
+                        <label for="star2">★</label>
+                        <input type="radio" name="rating" value="1" id="star1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="working-well">What's working well?</label>
+                    <textarea id="working-well" name="workingWell" rows="3" placeholder="Tell us what you love about the extension..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="improvements">What could be improved?</label>
+                    <textarea id="improvements" name="improvements" rows="3" placeholder="Any suggestions for making it even better?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (optional)</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com (for follow-up)">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-accent">Submit Feedback</button>
+                    <button type="button" onclick="closeFeedbackModal()" class="btn btn-outline">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
             <div class="hero-content">
                 <div class="brand">
                     <img src="icons/logo.svg" alt="Em Dash Optimizer Logo" class="logo">
-                    <h1 class="title">Em Dash Optimizer</h1>
+                    <h1 class="title">
+                        Fix your em dashes (—)<br>
+                        <span class="title-line2">in one click</span>
+                    </h1>
                 </div>
-                <p class="subtitle">Optimize em dashes intelligently: comma, semicolon, or en dash with correct spacing</p>
-                <p class="description">Clean up text from LLMs and other sources instantly. One-click solution for better typography.</p>
+                <p class="subtitle">Cleaner punctuation for clearer writing – instantly.</p>
+                <p class="description">Perfect for cleaning up AI-generated text, professional documents, and everyday writing.</p>
                 
                 <div class="cta-buttons">
-                    <a href="https://chromewebstore.google.com/detail/em-dash-optimizer/your-extension-id" target="_blank" class="btn btn-accent">Install Extension</a>
+                    <a href="#TODO" target="_blank" class="btn btn-accent">Install the Chrome Extension</a>
                     <a href="#demo" class="btn btn-outline">See Demo</a>
                 </div>
             </div>
@@ -63,28 +120,34 @@
             </div>
         </header>
 
-        <!-- Features Section -->
+        <!-- Features + How to Use Section -->
         <section id="features" class="features">
             <div class="section-header scroll-reveal">
-                <h2 class="section-title">Powerful Features</h2>
-                <p class="section-subtitle">Everything you need for perfect typography in one extension</p>
+                <h2 class="section-title">How to Use</h2>
+                <p class="section-subtitle">Three simple steps to cleaner writing</p>
             </div>
             
             <div class="features-container">
                 <div class="feature-item left scroll-reveal-left delay-1">
                     <div class="feature-number">01</div>
                     <div class="feature-content">
-                        <div class="feature-icon">📋</div>
+                        <div class="feature-screenshot">
+                            <!-- TODO: Replace with actual screenshot -->
+                            <img src="Mockup-Screenshots/1.jpg" alt="One-click clipboard loading screenshot" class="feature-image" loading="lazy">
+                        </div>
                         <h3>One-click clipboard loading</h3>
-                        <p>Automatically loads your clipboard content for instant processing. No need to copy and paste manually - just click and optimize.</p>
+                        <p>Copy any text with em dashes from anywhere. When you open the extension, it automatically loads your clipboard content if it detects em dashes.</p>
                     </div>
                 </div>
 
                 <div class="feature-item right scroll-reveal-right delay-2">
                     <div class="feature-content">
-                        <div class="feature-icon">🔄</div>
+                        <div class="feature-screenshot">
+                            <!-- TODO: Replace with actual screenshot -->
+                            <img src="Mockup-Screenshots/2.jpg" alt="Smart replacement in action" class="feature-image" loading="lazy">
+                        </div>
                         <h3>Smart replacement</h3>
-                        <p>Intelligent algorithm replaces em dashes with the most appropriate punctuation based on context. Commas, semicolons, or periods - we choose what reads best.</p>
+                        <p>Click the bright yellow 'Optimize' button. The extension intelligently converts em dashes to proper punctuation based on context: commas, semicolons, or clean removal.</p>
                     </div>
                     <div class="feature-number">02</div>
                 </div>
@@ -92,38 +155,65 @@
                 <div class="feature-item left scroll-reveal-left delay-3">
                     <div class="feature-number">03</div>
                     <div class="feature-content">
-                        <div class="feature-icon">👀</div>
-                        <h3>Live preview</h3>
-                        <p>See your text with highlighted em dashes before processing. Preview the changes and understand exactly what will be optimized.</p>
+                        <div class="feature-screenshot">
+                            <!-- TODO: Replace with actual screenshot -->
+                            <img src="Mockup-Screenshots/3.jpg" alt="Writer-friendly interface" class="feature-image" loading="lazy">
+                        </div>
+                        <h3>Writer-friendly</h3>
+                        <p>Your optimized text is automatically copied to clipboard. Simply paste it wherever you need clean, readable writing – no em-dash overload.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Know Your Dashes Section -->
+        <section id="punctuation-guide" class="punctuation-guide">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Know Your Dashes</h2>
+                <p class="section-subtitle">Understanding the differences between punctuation marks</p>
+            </div>
+            
+            <div class="dash-comparison">
+                <div class="dash-item scroll-reveal delay-1">
+                    <div class="dash-symbol">—</div>
+                    <div class="dash-info">
+                        <h3>Em Dash</h3>
+                        <p class="dash-description">Longest dash, used for breaks in thought, emphasis, or to set off explanatory information</p>
+                        <div class="dash-example">
+                            <strong>Example:</strong> "The weather today — unlike yesterday — is perfect for hiking."
+                        </div>
+                        <div class="dash-problem">❌ Often overused in AI-generated text</div>
                     </div>
                 </div>
 
-                <div class="feature-item right scroll-reveal-right delay-4">
-                    <div class="feature-content">
-                        <div class="feature-icon">⌨️</div>
-                        <h3>Keyboard shortcuts</h3>
-                        <p>Quick shortcuts for faster workflow. Ctrl+L to load, Ctrl+R to remove, Ctrl+E to replace. Boost your productivity with lightning-fast access.</p>
-                    </div>
-                    <div class="feature-number">04</div>
-                </div>
-
-                <div class="feature-item left scroll-reveal-left delay-5">
-                    <div class="feature-number">05</div>
-                    <div class="feature-content">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Modern UI</h3>
-                        <p>Clean, intuitive interface that matches your workflow. Dark theme design that's easy on the eyes and integrates seamlessly with your browser.</p>
+                <div class="dash-item scroll-reveal delay-2">
+                    <div class="dash-symbol">–</div>
+                    <div class="dash-info">
+                        <h3>En Dash</h3>
+                        <p class="dash-description">Medium dash, used for ranges, connections, and compound adjectives</p>
+                        <div class="dash-example">
+                            <strong>Example:</strong> "Pages 10–20" or "New York–London flight"
+                        </div>
+                        <div class="dash-usage">✅ Perfect for ranges and connections</div>
                     </div>
                 </div>
 
-                <div class="feature-item right scroll-reveal-right delay-6">
-                    <div class="feature-content">
-                        <div class="feature-icon">❌</div>
-                        <h3>Complete removal option</h3>
-                        <p>Sometimes you just want all em dashes gone. One click removes every em dash from your text, leaving clean, readable content.</p>
+                <div class="dash-item scroll-reveal delay-3">
+                    <div class="dash-symbol">-</div>
+                    <div class="dash-info">
+                        <h3>Hyphen</h3>
+                        <p class="dash-description">Shortest mark, used for compound words and line breaks</p>
+                        <div class="dash-example">
+                            <strong>Example:</strong> "Well-known author" or "Twenty-five years old"
+                        </div>
+                        <div class="dash-usage">✅ Essential for compound words</div>
                     </div>
-                    <div class="feature-number">06</div>
                 </div>
+            </div>
+
+            <div class="conversion-tip scroll-reveal delay-4">
+                <div class="tip-icon">💡</div>
+                <p><strong>Pro Tip:</strong> Most em dashes in casual writing can be replaced with commas, semicolons, or periods for better readability.</p>
             </div>
         </section>
 
@@ -131,7 +221,8 @@
         <section id="use-cases" class="use-cases">
             <div class="section-header scroll-reveal">
                 <h2 class="section-title">Perfect For</h2>
-                <p class="section-subtitle">See how Em Dash Optimizer transforms real-world content</p>
+                <p class="section-subtitle">Perfect for resumes, professional emails, and social media posts.<br>
+                Also loved by writers, students, and editors.</p>
             </div>
             
             <div class="carousel-container">
@@ -139,7 +230,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/resume-example.png" alt="Resume example showing em-dash optimization" class="use-case-image">
+                                <img src="images/resume-example.png" alt="Resume example showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -152,7 +243,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/Blog-post.webp" alt="Blog post example showing em-dash optimization" class="use-case-image">
+                                <img src="images/Blog-post.webp" alt="Blog post example showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -165,7 +256,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/social-media-example.jpg" alt="Social media post showing em-dash optimization" class="use-case-image">
+                                <img src="images/social-media-example.jpg" alt="Social media post showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -178,7 +269,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/Academic-writing.png" alt="Academic writing example showing em-dash optimization" class="use-case-image">
+                                <img src="images/Academic-writing.png" alt="Academic writing example showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -191,7 +282,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/business-document.png" alt="Business document example showing em-dash optimization" class="use-case-image">
+                                <img src="images/business-document.png" alt="Business document example showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -204,7 +295,7 @@
                     <div class="use-case-card">
                         <div class="card-visual">
                             <div class="image-container">
-                                <img src="images/email-example.jpg" alt="Email example showing em-dash optimization" class="use-case-image">
+                                <img src="images/email-example.jpg" alt="Email example showing em-dash optimization" class="use-case-image" loading="lazy">
                             </div>
                         </div>
                         <div class="card-content">
@@ -264,68 +355,38 @@
                 <div class="step scroll-reveal delay-1">
                     <div class="step-number magnetic">1</div>
                     <div class="step-content">
-                        <h3>Download Extension</h3>
-                        <p>Download or clone the extension files to your computer</p>
+                        <h3>Visit the Chrome Web Store</h3>
+                        <p>Search for "Em Dash Optimizer" or follow our direct link</p>
                     </div>
                 </div>
                 <div class="step scroll-reveal delay-2">
                     <div class="step-number magnetic">2</div>
                     <div class="step-content">
-                        <h3>Open Chrome Extensions</h3>
-                        <p>Navigate to <code>chrome://extensions/</code> in your browser</p>
+                        <h3>Click "Add to Chrome"</h3>
+                        <p>One simple click to install the extension</p>
                     </div>
                 </div>
                 <div class="step scroll-reveal delay-3">
                     <div class="step-number magnetic">3</div>
                     <div class="step-content">
-                        <h3>Enable Developer Mode</h3>
-                        <p>Toggle the switch in the top-right corner</p>
-                    </div>
-                </div>
-                <div class="step scroll-reveal delay-4">
-                    <div class="step-number magnetic">4</div>
-                    <div class="step-content">
-                        <h3>Load Unpacked</h3>
-                        <p>Click "Load unpacked" and select the extension folder</p>
+                        <h3>Start writing</h3>
+                        <p>Extension runs automatically – just copy text and click the icon</p>
                     </div>
                 </div>
             </div>
             
-            <div class="download-section scroll-reveal delay-5">
-                <a href="#" class="btn btn-accent btn-large magnetic">Download Extension</a>
-                <p class="download-note">Free • Open Source • No Data Collection</p>
+            <div class="download-section scroll-reveal delay-4">
+                <a href="#TODO" class="btn btn-accent btn-large magnetic">Install the Chrome Extension</a>
+                <p class="download-note">Free • No Data Collection • Works Offline</p>
             </div>
         </section>
 
-        <!-- How to Use -->
-        <section class="shortcuts">
-            <h2 class="section-title scroll-reveal">How to Use</h2>
-            <div class="shortcuts-list">
-                <div class="shortcut scroll-reveal delay-1 magnetic">
-                    <div class="step-icon">1️⃣</div>
-                    <div class="step-details">
-                        <div class="step-action">Copy your text</div>
-                        <div class="step-method"><kbd>Ctrl + C</kbd> to copy text with em dashes</div>
-                    </div>
-                </div>
-                <div class="shortcut scroll-reveal delay-2 magnetic">
-                    <div class="step-icon">2️⃣</div>
-                    <div class="step-details">
-                        <div class="step-action">Click the extension</div>
-                        <div class="step-method">Click Em Dash Optimizer in your browser toolbar</div>
-                    </div>
-                </div>
-                <div class="shortcut scroll-reveal delay-3 magnetic">
-                    <div class="step-icon">3️⃣</div>
-                    <div class="step-details">
-                        <div class="step-action">Paste optimized text</div>
-                        <div class="step-method"><kbd>Ctrl + V</kbd> to paste clean, readable text</div>
-                    </div>
-                </div>
-            </div>
-            <div class="workflow-note scroll-reveal delay-4">
-                <div class="note-icon">✨</div>
-                <p>That's it! One-click solution for better typography. No complex shortcuts to remember.</p>
+        <!-- Bottom CTA Section -->
+        <section class="bottom-cta">
+            <div class="bottom-cta-content scroll-reveal">
+                <h2>Ready to clean up your writing?</h2>
+                <p>Join thousands of writers using Em Dash Optimizer for cleaner, more readable text.</p>
+                <a href="#TODO" target="_blank" class="btn btn-accent btn-large magnetic">Install the Chrome Extension</a>
             </div>
         </section>
 
@@ -394,16 +455,23 @@
             observer.observe(el);
         });
 
-        // Parallax effect
+        // Optimized parallax effect
         let ticking = false;
+        let parallaxElements = [];
+        
+        // Cache elements once
+        document.addEventListener('DOMContentLoaded', () => {
+            parallaxElements = Array.from(document.querySelectorAll('.parallax-slow'));
+        });
+        
         function updateParallax() {
             const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.parallax-slow');
             
+            // Use transform3d for better performance
             parallaxElements.forEach(element => {
                 const speed = 0.5;
                 const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
+                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
             });
             
             ticking = false;
@@ -416,7 +484,8 @@
             }
         }
 
-        window.addEventListener('scroll', requestParallaxTick);
+        // Use passive listener for better performance
+        window.addEventListener('scroll', requestParallaxTick, { passive: true });
 
         // Page load animation
         document.addEventListener('DOMContentLoaded', () => {
@@ -503,6 +572,47 @@
                 }
             }
         });
+
+        // Feedback modal functions
+        function openFeedbackModal() {
+            const modal = document.getElementById('feedbackModal');
+            modal.classList.add('show');
+        }
+
+        function closeFeedbackModal(event) {
+            const modal = document.getElementById('feedbackModal');
+            if (event && event.target !== modal) return;
+            modal.classList.remove('show');
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeFeedbackModal();
+            }
+        });
+
+        // Handle feedback form submission
+        function submitFeedback(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const feedback = {
+                rating: formData.get('rating'),
+                workingWell: formData.get('workingWell'),
+                improvements: formData.get('improvements'),
+                email: formData.get('email')
+            };
+            
+            // For now, just show a thank you message
+            // In production, this would send to your feedback service
+            alert('Thank you for your feedback! We really appreciate it.');
+            
+            // Reset form and close modal
+            event.target.reset();
+            closeFeedbackModal();
+        }
     </script>
 </body>
 </html>
