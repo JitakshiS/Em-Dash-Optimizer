@@ -40,7 +40,7 @@
             <h3>Share Your Feedback</h3>
             <p>Help us improve Em Dash Optimizer! Your input is valuable.</p>
             
-            <form class="feedback-form" onsubmit="submitFeedback(event)">
+            <form class="feedback-form" action="https://formspree.io/f/mzzapjoj" method="POST">
                 <div class="form-group">
                     <label>How would you rate this extension?</label>
                     <div class="star-rating">
@@ -59,7 +59,7 @@
 
                 <div class="form-group">
                     <label for="working-well">What's working well?</label>
-                    <textarea id="working-well" name="workingWell" rows="3" placeholder="Tell us what you love about the extension..."></textarea>
+                    <textarea id="working-well" name="working_well" rows="3" placeholder="Tell us what you love about the extension..."></textarea>
                 </div>
 
                 <div class="form-group">
@@ -95,8 +95,7 @@
                 <p class="description">Perfect for cleaning up AI-generated text, professional documents, and everyday writing.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#TODO" target="_blank" class="btn btn-accent">Install the Chrome Extension</a>
-                    <a href="#demo" class="btn btn-outline">See Demo</a>
+                    <a href="https://chromewebstore.google.com/detail/lhfkhndendkleknhofppofgeecjfblnf?utm_source=item-share-cb" target="_blank" class="btn btn-accent">Install the Chrome Extension</a>
                 </div>
             </div>
             
@@ -119,6 +118,30 @@
                 </div>
             </div>
         </header>
+
+        <!-- Video Demo Section -->
+        <section id="video-demo" class="video-demo">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Watch Em Dash Optimizer in Action</h2>
+                <p class="section-subtitle">See how easy it is to transform messy text into clean, readable content</p>
+            </div>
+            
+            <div class="video-container scroll-reveal delay-1">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/yKEHVN2kd1c?rel=0&modestbranding=1&showinfo=0" 
+                        title="Em Dash Optimizer Demo Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-cta">
+                    <p class="video-description">Ready to try it yourself? Install the extension and start optimizing your text instantly.</p>
+                    <a href="https://chromewebstore.google.com/detail/lhfkhndendkleknhofppofgeecjfblnf?utm_source=item-share-cb" target="_blank" class="btn btn-accent">Get the Extension</a>
+                </div>
+            </div>
+        </section>
 
         <!-- Features + How to Use Section -->
         <section id="features" class="features">
@@ -385,7 +408,7 @@
             <div class="bottom-cta-content scroll-reveal">
                 <h2>Ready to clean up your writing?</h2>
                 <p>Join thousands of writers using Em Dash Optimizer for cleaner, more readable text.</p>
-                <a href="#TODO" target="_blank" class="btn btn-accent btn-large magnetic">Install the Chrome Extension</a>
+                <a href="https://chromewebstore.google.com/detail/lhfkhndendkleknhofppofgeecjfblnf?utm_source=item-share-cb" target="_blank" class="btn btn-accent btn-large magnetic">Install the Chrome Extension</a>
             </div>
         </section>
 
@@ -591,27 +614,28 @@
             }
         });
 
-        // Handle feedback form submission
-        function submitFeedback(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(event.target);
-            const feedback = {
-                rating: formData.get('rating'),
-                workingWell: formData.get('workingWell'),
-                improvements: formData.get('improvements'),
-                email: formData.get('email')
-            };
-            
-            // For now, just show a thank you message
-            // In production, this would send to your feedback service
-            alert('Thank you for your feedback! We really appreciate it.');
-            
-            // Reset form and close modal
-            event.target.reset();
-            closeFeedbackModal();
-        }
+        // Handle successful form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.feedback-form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    // Show loading state
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Set a timeout to show success message (Formspree redirects or shows success)
+                    setTimeout(() => {
+                        alert('Thank you for your feedback! We really appreciate it.');
+                        form.reset();
+                        closeFeedbackModal();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                });
+            }
+        });
     </script>
 </body>
 </html>
